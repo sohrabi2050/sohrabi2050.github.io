@@ -4,12 +4,13 @@
 <head>
     <title>Simple Tooltip</title>
     <link rel="stylesheet" type="text/css" href="tooltip-demo.css">
-    <script src="https://raw.githubusercontent.com/sohrabi2050/tooltip/main/dist/index.js"></script>
 </head>
 
 <body style="margin: 0 auto;">
     <div class="box">
-        <span class="top-left" data-positions="left" data-tooltip="long text tooltip &lt;br&gt; A new text after a html break line">My tooltip set to show on [left] </span>
+        <span class="top-left" data-positions="left"
+            data-tooltip="long text tooltip &lt;br&gt; A new text after a html break line">My tooltip set to show on
+            [left] </span>
         <span class="top-center" data-positions="top" data-tooltip="test">My tooltip set to show on [top] </span>
         <span class="top-right" data-positions="right" data-tooltip="test">My tooltip set to show on [right]</span>
     </div>
@@ -27,8 +28,12 @@
         </div>
     </div>
     <script>
-        initTooltip();
+        document.addEventListener("DOMContentLoaded", function (event) {
+            if (window.initTooltip)
+                initTooltip();
+        });
     </script>
+    <script type="text/javascript" src="https://unpkg.com/@sohrabi2050/tooltip@1.0.0/dist/index.js"></script>
 </body>
 
 </html>
